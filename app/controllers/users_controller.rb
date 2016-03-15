@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
    # @user = User.new { first_name= "Anil", last_name="Gupta" }
-
    # @user = User.find(980190962)
   end
 
@@ -73,6 +72,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.fetch(:user, {})
+     # params.fetch(:user, {})
+      params.require(:user).permit(:first_name, :last_name)
     end
 end

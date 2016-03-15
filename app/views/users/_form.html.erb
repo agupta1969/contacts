@@ -11,7 +11,20 @@
     </div>
   <% end %>
 
+    <div class=""field">
+      <%= f.label :first_name  %>
+      <%= f.text_field :first_name,:placeholder => "Enter First Name here" %>
+    </div>
+
+    <div class=""field">
+    <%= f.label :last_name  %>
+    <%= f.text_field :last_name,:placeholder => "Enter Last Name here" %>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
+
 <% end %>
